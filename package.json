@@ -8,5 +8,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anio-js-core-foundation/node-find-nearest-file.git"
+  },
+  "exports": {
+    ".": "./index.mjs",
+    "./factory": "./factory.mjs"
   }
 }
