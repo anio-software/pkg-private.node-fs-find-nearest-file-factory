@@ -1,0 +1,12 @@
+{
+  "name": "@anio-js-core-foundation/node-find-nearest-file",
+  "version": "1.0.0",
+  "description": "Find nearest (usually configuration) file for a given path.",
+  "main": "index.mjs",
+  "author": "Anio Software <info@anio.software>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anio-js-core-foundation/node-find-nearest-file.git"
+  }
+}
