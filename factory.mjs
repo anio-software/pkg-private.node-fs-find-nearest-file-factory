@@ -38,8 +38,8 @@ function nodeFindNearestFile(dependencies, config_file_name, dir_path) {
  * without error-ing out.
  */
 export default async function nodeFindNearestFileFactory() {
-	const fs = await import("node:fs")
-	const path = await import("node:path")
+	const {default: fs} = await import("node:fs")
+	const {default: path} = await import("node:path")
 	const dependencies = {fs, path}
 
 	return (...args) => {
