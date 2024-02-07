@@ -1,6 +1,6 @@
 {
   "name": "@anio-js-core-foundation/node-find-nearest-file",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Find nearest (usually configuration) file for a given path.",
   "main": "index.mjs",
   "author": "Anio Software <info@anio.software>",
