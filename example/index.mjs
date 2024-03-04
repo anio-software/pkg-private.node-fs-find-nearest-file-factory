@@ -7,5 +7,5 @@ const __dirname = path.dirname(
 )
 
 console.log(
-	nodeFindNearestFile("config.mjs", path.resolve(__dirname, "project", "dir", "subdir"))
+	await nodeFindNearestFile("package.json", path.resolve(__dirname, "project", "dir", "subdir"))
 )
