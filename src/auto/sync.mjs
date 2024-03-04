@@ -1,3 +1,5 @@
+import isNode from "@anio-js-foundation/is-node"
+
 function nodeFindNearestFile(dependencies, config_file_name, dir_path) {
 	const {fs, path} = dependencies
 	const absolute_dir_path = fs.realpathSync(dir_path)
@@ -40,6 +42,12 @@ function nodeFindNearestFile(dependencies, config_file_name, dir_path) {
  * without error-ing out.
  */
 async function nodeFindNearestFileFactory() {
+	if (!isNode()) {
+		return (...args) => {
+			throw new Error(`This module cannot be used outside of nodejs.`)
+		}
+	}
+
 	const {default: fs} = await import("node:fs")
 	const {default: path} = await import("node:path")
 	const dependencies = {fs, path}
