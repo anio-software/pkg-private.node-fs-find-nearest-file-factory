@@ -1,16 +1,21 @@
 {
-  "name": "@anio-js-core-foundation/node-find-nearest-file",
+  "name": "@anio-node-foundation/fs-find-nearest-file-async",
   "version": "1.1.1",
   "description": "Find nearest (usually configuration) file for a given path.",
-  "main": "index.mjs",
+  "main": "./dist/package.mjs",
   "author": "Anio Software <info@anio.software>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anio-js-core-foundation/node-find-nearest-file.git"
+    "url": "git+https://github.com/anio-node-foundation/fs-find-nearest-file-async.git"
   },
-  "exports": {
-    ".": "./index.mjs",
-    "./factory": "./factory.mjs"
-  }
+  "devDependencies": {
+    "@anio-software/npm-package-bundler": "^1.0.0"
+  },
+  "scripts": {
+    "prepare": "./node_modules/.bin/npm-package-bundler ."
+  },
+  "files": [
+    "./dist/package.mjs"
+  ]
 }

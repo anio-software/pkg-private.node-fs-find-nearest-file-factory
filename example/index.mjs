@@ -1,4 +1,4 @@
-import nodeFindNearestFile from "../index.mjs"
+import nodeFindNearestFile from "../src/index.mjs"
 import {fileURLToPath} from "node:url"
 import path from "node:path"
 
