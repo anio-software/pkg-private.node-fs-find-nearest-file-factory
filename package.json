@@ -1,6 +1,6 @@
 {
   "name": "@anio-node-foundation/fs-find-nearest-file",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Find nearest (usually configuration) file for a given path.",
   "main": "./build/package.mjs",
   "author": "Anio Software <info@anio.software>",
