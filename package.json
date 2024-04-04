@@ -1,6 +1,6 @@
 {
   "name": "@anio-fs/int--find-nearest-file",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Find nearest (usually configuration) file for a given path.",
   "main": "./dist/package.min.mjs",
   "typings": "./dist/index.d.ts",
