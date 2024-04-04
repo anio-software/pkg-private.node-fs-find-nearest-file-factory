@@ -3,6 +3,7 @@
   "version": "4.0.0",
   "description": "Find nearest (usually configuration) file for a given path.",
   "main": "./dist/package.min.mjs",
+  "typings": "./dist/index.d.ts",
   "author": "Anio Software <info@anio.software>",
   "license": "MIT",
   "repository": {
