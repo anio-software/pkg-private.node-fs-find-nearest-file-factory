@@ -1,5 +1,5 @@
 {
-  "name": "@anio-node-foundation/fs-find-nearest-file",
+  "name": "@anio-fs/int--find-nearest-file",
   "version": "4.0.0",
   "description": "Find nearest (usually configuration) file for a given path.",
   "main": "./dist/package.min.mjs",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anio-node-foundation/fs-find-nearest-file.git"
+    "url": "git+https://github.com/anio-fs-org/int--find-nearest-file.git"
   },
   "devDependencies": {
     "@anio-js-foundation/is-node": "^2.0.0",
