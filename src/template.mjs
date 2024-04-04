@@ -37,10 +37,10 @@ async function nodeFindNearestFile(dependencies, config_file_name, dir_path) {
 	)
 }
 
-/**
- * Implemented this way so this module can be imported by a browser
- * without error-ing out.
- */
+//
+// Implemented this way so this module can be imported by a browser
+// without error-ing out.
+//
 async function nodeFindNearestFileFactory() {
 	if (!isNode()) {
 		return (...args) => {
