@@ -1,5 +1,6 @@
 .DS_Store
 /node_modules/
+/.fourtune/
 /package-lock.json
 /build/
 /dist/

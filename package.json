@@ -12,11 +12,11 @@
   },
   "devDependencies": {
     "@anio-js-foundation/is-node": "^2.0.0",
-    "@vipen/target-js": "^0.15.1",
-    "vipen": "^0.2.1"
+    "@fourtune/realm-js": "^0.1.0",
+    "fourtune": "^0.0.1"
   },
   "scripts": {
-    "prepare": "./node_modules/.bin/vipen ."
+    "prepare": "./node_modules/.bin/fourtune ."
   },
   "files": [
     "./dist/"
