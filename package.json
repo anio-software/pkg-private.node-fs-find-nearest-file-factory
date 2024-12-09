@@ -15,8 +15,14 @@
     "@fourtune/realm-js": "^0.31000.2",
     "fourtune": "^0.30000.0"
   },
+  "peerDependencies": {
+    "@types/node": ">=22.7.x"
+  },
   "scripts": {
     "prepare": "./node_modules/.bin/fourtune ."
+  },
+  "engines": {
+    "node": ">=22.7.x"
   },
   "files": [
     "./dist/"
