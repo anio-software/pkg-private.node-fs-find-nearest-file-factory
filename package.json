@@ -11,6 +11,7 @@
     "url": "git+https://github.com/anio-fs-org/int--find-nearest-file.git"
   },
   "devDependencies": {
+    "@aniojs/is-node": "^0.1.0",
     "@fourtune/realm-js": "^0.1.0",
     "fourtune": "^0.0.1"
   },
