@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/aniojs-private-org/node-fs-find-nearest-file.git"
   },
+  "type": "module",
   "devDependencies": {
     "@aniojs/is-node": "^0.1.0",
     "@fourtune/core": "^0.1101.0",
