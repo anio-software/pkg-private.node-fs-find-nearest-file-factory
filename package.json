@@ -16,7 +16,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "@aniojs/is-node": "^0.1.1",
+    "@aniojs/is-node": "^0.1.2",
     "@fourtune/core": "^0.1101.0",
     "@fourtune/realm-js": "^0.31000.5",
     "fourtune": "^0.30000.1"
