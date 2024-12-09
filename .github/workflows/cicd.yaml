@@ -1,4 +1,24 @@
-# This is CI/CD version 0.3.0
+# This is CI/CD version 0.8.0
+#
+# Changelog
+#
+# v0.4.0 - 07.09.2024 (by eXory2024)
+# Add environment variable "ANIO_CICD" for scripts to detect CI.
+# "ANIO_CICD" contains the current CI/CD version.
+#
+# v0.5.0 - 21.09.2024 (by eXory2024)
+# Use "npm ci" (require package-lock.json) instead of "npm i"
+#
+# v0.6.0 - 24.09.2024 (by eXory2024)
+# Add manual "experimental" releases.
+#
+# v0.7.0 - 01.11.2024 (by eXory2024)
+# Add repository name to environment (ANIO_CICD_REPO)
+#
+# v0.8.0 - 09.12.2024 (by eXory2024)
+# Bump node version to v22
+#
+
 name: CI/CD
 
 on:
@@ -11,8 +31,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [21.x]
-
+        node-version: [22.x]
+    env:
+      ANIO_CICD: "v0.8.0"
+      ANIO_CICD_REPO: "${{ github.repository }}"
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -21,7 +43,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: "Install node modules (if present)"
-        run: bash -c 'if [ -f package.json ]; then npm i ; fi'
+        run: bash -c 'if [ -f package.json ]; then npm ci ; fi'
 
       - name: "Run .cicd/test.sh script (if present)"
         run: bash -c 'if [ -f ./.cicd/test.sh ]; then ./.cicd/test.sh ; fi'
@@ -34,17 +56,19 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
     permissions:
       id-token: write
-
+    env:
+      ANIO_CICD: "v0.8.0"
+      ANIO_CICD_REPO: "${{ github.repository }}"
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 21.x
+          node-version: 22.x
           registry-url: "https://registry.npmjs.org"
 
       - name: "Install node modules (if present)"
-        run: bash -c 'if [ -f package.json ]; then npm i ; fi'
+        run: bash -c 'if [ -f package.json ]; then npm ci ; fi'
 
       #
       # Make sure package.json's version field and
