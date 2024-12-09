@@ -1,6 +1,6 @@
 {
   "name": "@anio-fs/int--find-nearest-file",
-  "version": "6.0.0",
+  "version": "0.0.0",
   "author": "Anio Software <info@anio.software>",
   "description": "Find nearest (usually configuration) file for a given path.",
   "license": "MIT",
