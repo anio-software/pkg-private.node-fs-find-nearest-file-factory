@@ -18,8 +18,8 @@
   "devDependencies": {
     "@aniojs/is-node": "^0.1.1",
     "@fourtune/core": "^0.1101.0",
-    "@fourtune/realm-js": "^0.31000.2",
-    "fourtune": "^0.30000.0"
+    "@fourtune/realm-js": "^0.31000.5",
+    "fourtune": "^0.30000.1"
   },
   "peerDependencies": {
     "@types/node": ">=22.7.x"
