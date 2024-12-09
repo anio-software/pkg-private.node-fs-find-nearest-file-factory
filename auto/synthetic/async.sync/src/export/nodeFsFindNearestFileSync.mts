@@ -1,21 +1,21 @@
 import {isNode} from "@aniojs/is-node"
 
-async function nodeFindNearestFile(
+function nodeFindNearestFile(
 	dependencies: any,
 	config_file_name: string,
 	dir_path: string
-) : Promise<string|false> {
+) : string|false {
 	const {fs, path} = dependencies
-	const absolute_dir_path = await fs.promises.realpath(dir_path)
+	const absolute_dir_path = fs.realpathSync(dir_path)
 	const parent_dir_path = path.dirname(absolute_dir_path)
 
 	let config_path = null
 
-	const entries = await fs.promises.readdir(absolute_dir_path)
+	const entries = fs.readdirSync(absolute_dir_path)
 
 	for (const entry of entries) {
 		const absolute_entry_path = path.resolve(absolute_dir_path, entry)
-		const stat = await fs.promises.lstat(absolute_entry_path)
+		const stat = fs.lstatSync(absolute_entry_path)
 
 		// ignore directories
 		if (stat.isDirectory() || stat.isSymbolicLink()) continue;
@@ -36,7 +36,7 @@ async function nodeFindNearestFile(
 		return false
 	}
 
-	return await nodeFindNearestFile(
+	return nodeFindNearestFile(
 		dependencies, config_file_name, parent_dir_path
 	)
 }
@@ -56,16 +56,20 @@ async function nodeFindNearestFileFactory() {
 	const {default: path} = await import("node:path")
 	const dependencies = {fs, path}
 
-	return async (config_file_name: string, dir_path: string) => {
-		return await nodeFindNearestFile(dependencies, config_file_name, dir_path)
+	return (config_file_name: string, dir_path: string) => {
+		return nodeFindNearestFile(
+			dependencies,
+			config_file_name,
+			dir_path
+		)
 	}
 }
 
 const impl = await nodeFindNearestFileFactory()
 
-export async function nodeFsFindNearestFile(
+export function nodeFsFindNearestFileSync(
 	config_file_name: string,
 	dir_path: string
-) : Promise<string | false> {
-	return await impl(config_file_name, dir_path)
+) : string | false {
+	return impl(config_file_name, dir_path)
 }
