@@ -10,6 +10,9 @@
   },
   "type": "module",
   "devDependencies": {
+    "@anio-software/enkore": "^0.0.100",
+    "@anio-software/enkore.core": "^0.11.2",
+    "@anio-software/enkore.target-js-node": "^0.0.253-canary-4dc1daac-0594cb5e",
     "@aniojs/is-node": "^0.1.2"
   }
 }
