@@ -1,4 +1,5 @@
 {
+  "private": true,
   "type": "module",
   "name": "@anio-software/pkg-private.node-fs-find-nearest-file",
   "version": "0.0.0",
