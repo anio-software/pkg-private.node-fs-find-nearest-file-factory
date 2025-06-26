@@ -4,12 +4,6 @@
   "author": "Anio Software <info@anio.software>",
   "description": "Find nearest (usually configuration) file for a given path.",
   "license": "MIT",
-  "exports": {
-    ".": {
-      "types": "./dist/default/index.min.d.mts",
-      "import": "./dist/default/index.min.mjs"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anio-software/pkg-private.node-fs-find-nearest-file.git"
@@ -20,17 +14,5 @@
     "@fourtune/core": "^0.1101.0",
     "@fourtune/realm-js": "^0.31000.5",
     "fourtune": "^0.30000.1"
-  },
-  "peerDependencies": {
-    "@types/node": ">=22.7.x"
-  },
-  "scripts": {
-    "prepare": "./node_modules/.bin/fourtune ."
-  },
-  "engines": {
-    "node": ">=22.7.x"
-  },
-  "files": [
-    "./dist/"
-  ]
+  }
 }
