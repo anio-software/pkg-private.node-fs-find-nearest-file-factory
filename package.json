@@ -1,13 +1,13 @@
 {
   "private": true,
   "type": "module",
-  "name": "@anio-software/pkg-private.node-fs-find-nearest-file",
+  "name": "@anio-software/pkg-private.node-fs-find-nearest-file-factory",
   "version": "0.0.0",
   "description": "Find nearest (usually configuration) file for a given path.",
   "author": "Anio Software <info@anio.software>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anio-software/pkg-private.node-fs-find-nearest-file.git"
+    "url": "git+https://github.com/anio-software/pkg-private.node-fs-find-nearest-file-factory.git"
   },
   "license": "MIT",
   "devDependencies": {
