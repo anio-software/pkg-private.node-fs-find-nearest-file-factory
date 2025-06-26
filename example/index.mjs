@@ -1,4 +1,4 @@
-import {nodeFsFindNearestFile} from "../dist/default/index.min.mjs"
+import {nodeFsFindNearestFileSyncFactory} from "../products/project/dist/default/index.min.mjs"
 import {fileURLToPath} from "node:url"
 import path from "node:path"
 
@@ -6,6 +6,8 @@ const __dirname = path.dirname(
 	fileURLToPath(import.meta.url)
 )
 
+const nodeFsFindNearestFileSync = await nodeFsFindNearestFileSyncFactory()
+
 console.log(
-	await nodeFsFindNearestFile("config.mjs", path.resolve(__dirname, "project", "dir", "subdir"))
+	nodeFsFindNearestFileSync("config.mjs", path.resolve(__dirname, "project", "dir", "subdir"))
 )
