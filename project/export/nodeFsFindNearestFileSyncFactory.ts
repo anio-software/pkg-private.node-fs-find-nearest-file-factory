@@ -1,21 +1,15 @@
-import {isNodeEnvironment, isString} from "@anio-software/pkg.is"
+import {isString} from "@anio-software/pkg.is"
 
 declare function nodeFsFindNearestFileSync(
 	configFileName: string,
 	dirPath: string
 ): string|false;
 
-export async function nodeFsFindNearestFileSyncFactory(
-
-): Promise<typeof nodeFsFindNearestFileSync> {
-	const isNode = await isNodeEnvironment()
-
-	if (!isNode) {
-		throw new Error(`This function is only callable in a node environment.`)
-	}
-
-	const {default: nodeFs} = await import("node:fs")
-	const {default: nodePath} = await import("node:path")
+export function nodeFsFindNearestFileSyncFactory(
+	nodeJSRequire: NodeJS.Require
+): typeof nodeFsFindNearestFileSync {
+	const nodeFs = nodeJSRequire("node:fs") as typeof import("node:fs")
+	const nodePath = nodeJSRequire("node:path") as typeof import("node:path")
 
 	return function nodeFsFindNearestFileSync(
 		configFileName, dirPath
