@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "name": "@anio-software/pkg-private.node-fs-find-nearest-file-factory",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Find nearest (usually configuration) file for a given path.",
   "author": "Anio Software <info@anio.software>",
   "repository": {
